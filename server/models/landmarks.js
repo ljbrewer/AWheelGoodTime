@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const profileSchema = new Schema({
+const landmarkSchema = new Schema({
 
     landmarkName: {
         type: String,
@@ -9,7 +9,7 @@ const profileSchema = new Schema({
         trim: true,
     },
 
-    Location: {
+    lLocation: {
         type: String,
         trim: true,
     },
@@ -33,4 +33,6 @@ const profileSchema = new Schema({
         },
     ],
 })
-            
+const landmark = model('landmark', landmarkSchema);
+
+module.exports = landmark;

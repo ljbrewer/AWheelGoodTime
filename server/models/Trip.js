@@ -40,3 +40,6 @@ const tripSchema = new Schema({
         },
      ],
     })
+const Trip = model('Trip', tripSchema);
+
+module.exports = Trip;

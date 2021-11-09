@@ -9,7 +9,7 @@ const waypointSchema = new Schema({
             trim: true,
         },
   
-       Location: {
+       wLocation: {
             type: String,
             trim: true,
         },
@@ -34,3 +34,6 @@ const waypointSchema = new Schema({
     ],
     })
 
+const waypoint = model('waypoints', waypointSchema);
+
+module.exports = waypoint;
