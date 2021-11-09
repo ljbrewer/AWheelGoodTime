@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 
+
 const tripSchema = new Schema({
   
         tripName: {
