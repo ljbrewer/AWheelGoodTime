@@ -7,6 +7,7 @@ const profileSchema = new Schema({
         unique: true,
         trim: true,
     },
+    
 
 }
 )
