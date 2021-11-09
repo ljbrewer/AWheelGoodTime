@@ -1,9 +1,39 @@
 const { Schema, model } = require('mongoose');
 
-const profileSchema = new Schema({
-    name: {
-        type: String,
-        required: true,
-        unique: true,
-        trim: true,
-    },})
+const waypointSchema = new Schema({
+   
+        waypointName: {
+            type: String,
+            required: true,
+            unique: true,
+            trim: true,
+        },
+  
+       wLocation: {
+            type: String,
+            trim: true,
+        },
+        wLat: {
+            type: String,
+        },
+        wLon: {
+            type: String,
+        },
+       
+        owner: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Profile',
+            },
+        ],
+    Trip: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Trip',
+        },
+    ],
+    })
+
+const waypoint = model('waypoints', waypointSchema);
+
+module.exports = waypoint;

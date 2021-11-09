@@ -17,20 +17,19 @@ const profileSchema = new Schema({
       type: String,
       allowNull: false,
       unique: true,
-      validate: [
-        isEmail: true
-      ],
+      validate: [{
+        isEmail: true,
+      }],
   },
   password: {
       type: String,
       required: true,
       allowNull: false,
       validate: {
-        len: [8]
+        len: [8],
       },
-  },
-});
-
+    }
+  })
 const Profile = model('Profile', profileSchema);
 
 module.exports = Profile;

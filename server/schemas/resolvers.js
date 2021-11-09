@@ -9,6 +9,27 @@ const resolvers = {
     profile: async (parent, { profileId }) => {
       return Profile.findOne({ _id: profileId });
     },
+   trips: async () => {
+      return Trip.find();
+    },
+
+   trips: async (parent, { tripId }) => {
+      return trip.findOne({ _id: tripId });
+    },
+   waypoints: async () => {
+      return waypoints.find();
+    },
+
+    waypoints: async (parent, { waypointsId }) => {
+      return waypoints.findOne({ _id: waypointsId });
+    },
+    landmarks: async () => {
+      return landmarks.find();
+    },
+
+    landmarks: async (parent, { landmarks}) => {
+      return landmarks.findOne({ _id: landmarksId });
+    },
   },
 
   Mutation: {
