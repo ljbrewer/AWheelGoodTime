@@ -4,8 +4,7 @@
     "lastName": "Kernighan",
     "email":"emailB@mymail.com",
     "password": "password1254"
-    
-  },
+   },
   {
     "name": "Max",
     "lastname": "Kanat-Alexander",
@@ -14,7 +13,7 @@
   },
   {
     "name": "Amiko",
-    "lastname": "Kanat-Alexander",
+    "lastname": "Kan-Alex",
     "email": "emailA@mymail.com",
     "password": "password1254"
   },

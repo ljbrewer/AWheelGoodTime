@@ -19,7 +19,20 @@ const waypointSchema = new Schema({
         wLon: {
             type: String,
         },
-       
+        lodging: {
+            hName: {
+                type: String,
+        },
+            hAddress: {
+                type: String,
+        },
+            ConfirmationNo: {
+                type: String,
+        },
+            wPhone:{
+                type: String,
+        }
+    },
         owner: [
             {
                 type: Schema.Types.ObjectId,

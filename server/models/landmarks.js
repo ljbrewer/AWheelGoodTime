@@ -19,6 +19,20 @@ const landmarkSchema = new Schema({
     lLon: {
         type: String,
     },
+    hours:{
+        type: String,
+    },
+    cost:{
+        type: String,
+    },
+    contact:{
+        phone:{
+            type: String,
+        },
+        weblink:{
+            wlink: String,
+        },
+    },
 
     owner: [
         {

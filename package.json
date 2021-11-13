@@ -15,5 +15,10 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "@types/date-fns": "^2.6.0",
+    "date-fns": "^2.25.0",
+    "jsonwebtoken": "^8.5.1"
   }
 }
