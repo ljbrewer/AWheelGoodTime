@@ -33,7 +33,21 @@ const tripSchema = new Schema({
         eLon: {
             type: String,
         },
-    owner: [
+        lodging:{
+            hName:{
+                type: String,
+            },
+            hAddress:{
+                type: String,
+            },
+            ConfirmationNo:{
+                type: String,
+            },
+            hPhone:{
+                type: String,
+            },
+        },
+        owner: [
         {
             type: Schema.Types.ObjectId,
             ref: 'Profile',

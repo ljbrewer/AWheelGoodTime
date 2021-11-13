@@ -3,32 +3,26 @@ const { Schema, model } = require('mongoose');
 const profileSchema = new Schema({
   firstName: {
     type: String,
-    required: true,
-    unique: true,
+    // required: true,
     trim: true,
   },
   lastName: {
       type: String,
-      required: true,
-      unique: true,
+      // required: true,
       trim: true,
   },
   email: {
       type: String,
       allowNull: false,
       unique: true,
-      validate: [{
-        isEmail: true,
-      }],
+      match: [/.+@.+\..+/, 'Must match an email address!'],
   },
   password: {
       type: String,
       required: true,
       allowNull: false,
-      validate: {
-        len: [8],
-      },
-    }
+      minlength: 8,
+    },
   })
 const Profile = model('Profile', profileSchema);
 

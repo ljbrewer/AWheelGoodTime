@@ -2,26 +2,26 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   type Profile {
-    _id: ID
-    firstName: String
-    lastName: String
+    _id: ID!
+    firstName: String!
+    lastName: String!
     email: [String]!
   },
   type Trip {
-    _id: ID
-    tripName: String
+    _id: ID!
+    tripName: String!
     datetostartTrip: Date
     startLocation: [String]!
     endLocation:[String]!
   },
   type waypoints {
-    _id: ID
-    waypointName: String
+    _id: ID!
+    waypointName: String!
     wLocation: String
    }
   type landmarks {
-    _id: ID
-    landmarkName: String
+    _id: ID!
+    landmarkName: String!
     lLocation: String
   }
 
