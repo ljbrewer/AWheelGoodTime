@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile } = require('../models');
+const { Profile, Trip, Waypoints } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -58,27 +58,59 @@ const resolvers = {
       return { token, profile };
     },
 
-    addTrip: async (parent, {tripid, trip }) => {
-      return trip.findOneAndUpdate(
+    addTrip: async (parent, {tripid }) => {
+      const trip = await Trip.create({tripName, datetostartTrip,startLocation,endLocation,lodging:{hName, hAddress, ConfirmationNo,hPhone},});
+
+      await Trip.findOneAndUpdate(
         { _id: tripId },
         {
-          $addToSet: { skills: skill },
+          $addToSet: { trip: trip._id },
         },
-        {
-          new: true,
-          runValidators: true,
-        }
       );
+      return trip;
     },
+    addWaypoints: async (parent,{waypointId}) =>{
+      const waypoint = await Waypoints.create({
+        waypointName,wLocation,lodging:{ hName, hAddress, ConfirmationNo, hPhone}
+      });
+
+      await waypoint>findOneAndUpdate(
+        { _id: waypointId },
+        {
+          $addToSet:{waypoint: waypoint._id},
+        },
+       );
+       return waypoint;
+    },
+    addLandmarks: async (parent, { landmarkId }) => {
+      const landmark = await Landmarks.create({
+        landmarkName, lLocation, hours, cost, contact:{phone, weblink} 
+      },
+      );
+      
+      await landmark > findOneAndUpdate(
+        { _id: landmarkId },
+        {
+          $addToSet: { waypoint: landmark._id },
+        },
+      );
+      return landmark;
+    },
+
     removeProfile: async (parent, { profileId }) => {
       return Profile.findOneAndDelete({ _id: profileId });
     },
-    removeSkill: async (parent, { tripId, skill }) => {
-      return Profile.findOneAndUpdate(
-        { _id: tripId },
-        { $pull: { trip: trip } },
-        { new: true }
-      );
+    removeTrip: async (parent, { tripId }) => {
+      return Trip.findOneAndDelete(
+        { _id: tripId });
+    },
+    removeWaypoint: async (parent, { waypointId }) => {
+      return waypoint.findOneAndDelete(
+        { _id: waypointId });
+    }, 
+    removeLandmark: async (parent, { landmarkId }) => {
+      return landmark.findOneAndDelete(
+        { _id: landmarkId });
     },
   },
 };

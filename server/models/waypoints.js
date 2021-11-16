@@ -29,7 +29,7 @@ const waypointSchema = new Schema({
             ConfirmationNo: {
                 type: String,
         },
-            wPhone:{
+            hPhone:{
                 type: String,
         }
     },
