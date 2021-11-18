@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile, Trip, Waypoint } = require('../models');
+const { Profile, Trip, Waypoint, Landmark } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -29,7 +29,7 @@ const resolvers = {
       return landmarks.find();
     },
 
-    landmark: async (parent, { landmarks}) => {
+    landmark: async (parent, { landmarkId}) => {
       return landmarks.findOne({ _id: landmarksId });
     },
   },
