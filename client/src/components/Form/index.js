@@ -10,7 +10,6 @@ function Form() {
   const [hAddress, sethAddress] = useState('');
   const [ConfirmationNo, setConfirmationNo] = useState('');
   const [hPhone, sethPhone] = useState('');
-  const [triptName, setTripName] = useState('');
   const [datetostartTrip, setdatetostartTrip] = useState('');
 
 
@@ -20,6 +19,7 @@ function Form() {
 
     // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
     return tripname === 'tripName' ? settripName(value) : console.log("please enter a name for your trip.");
+
   };
 
   const handleFormSubmit = (e) => {

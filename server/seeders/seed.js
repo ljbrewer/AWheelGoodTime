@@ -19,23 +19,23 @@ db.once('open', async () => {
    const Waypoints = await Waypoint.insertMany(waypointSeeds);    
    const Landmarks = await Landmark.insertMany(landmarkSeeds);
 
-    for (newTrip of trips) {
+    for (newTrip of Trips) {
       // randomly add each trips to each Waypoint
-      const tempWaypoint = waypoints[Math.floor(Math.random() * waypoints.length)];
-      tempWaypoint.trips.push(newTrip._id);
+      const tempWaypoint = Waypoints[Math.floor(Math.random() * Waypoints.length)];
+      tempWaypoint.Trip.push(newTrip._id);
       await tempWaypoint.save();;
     }
-    for(newProfile of profiles){
+    for(newProfile of Profiles){
       // randomly add a profile to each trip
-      const tempTrip = trips[Math.floor(Math.random() * trips.length)];
-      tempTrip.profiles.push(newProfile._id);
+      const tempTrip = Trips[Math.floor(Math.random() * Trips.length)];
+      tempTrip.owner.push(newProfile._id);
       await tempTrip.save();
     }
-    for (newTrip of trips) {
+    for (newTrip of Trips) {
         // randomly add each trips to each Waypoint
-        const tempLandmark = landmarsks[Math.floor(Math.random() * landmarks.length)];
-        tempWaypoint.trips.push(newTrip._id);
-        await tempLandmark.save();;
+        const tempLandmark = Landmarks[Math.floor(Math.random() * Landmarks.length)];
+        tempLandmark.Trip.push(newTrip._id);
+        await tempLandmark.save();
     }
 
     console.log('all done!');

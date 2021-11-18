@@ -10,7 +10,7 @@ const tripSchema = new Schema({
             trim: true,
         },
         datetostartTrip: {
-            type: String,
+            type: Date,
             trim: true,
         },
         startLocation: {
@@ -33,7 +33,7 @@ const tripSchema = new Schema({
         eLon: {
             type: String,
         },
-        lodging:{
+        lodging:[{
             hName:{
                 type: String,
             },
@@ -46,7 +46,7 @@ const tripSchema = new Schema({
             hPhone:{
                 type: String,
             },
-        },
+        }],
         owner: [
         {
             type: Schema.Types.ObjectId,
