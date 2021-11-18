@@ -47,6 +47,6 @@ const waypointSchema = new Schema({
     ],
     })
 
-const waypoint = model('waypoints', waypointSchema);
+const Waypoint = model('Waypoint', waypointSchema);
 
-module.exports = waypoint;
+module.exports = Waypoint;

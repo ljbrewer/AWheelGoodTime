@@ -15,21 +15,21 @@ const resolvers = {
       return Trip.find();
     },
 
-   trips: async (parent, { tripId }) => {
+   trip: async (parent, { tripId }) => {
       return trip.findOne({ _id: tripId });
     },
    waypoints: async () => {
       return waypoints.find();
     },
 
-    waypoints: async (parent, { waypointsId }) => {
+    waypoint: async (parent, { waypointsId }) => {
       return waypoints.findOne({ _id: waypointsId });
     },
     landmarks: async () => {
       return landmarks.find();
     },
 
-    landmarks: async (parent, { landmarks}) => {
+    landmark: async (parent, { landmarks}) => {
       return landmarks.findOne({ _id: landmarksId });
     },
   },
@@ -69,7 +69,7 @@ const resolvers = {
       );
       return trip;
     },
-    addWaypoints: async (parent,{waypointId}) =>{
+    addWaypoint: async (parent,{waypointId}) =>{
       const waypoint = await Waypoints.create({
         waypointName,wLocation,lodging:{ hName, hAddress, ConfirmationNo, hPhone}
       });
@@ -82,7 +82,7 @@ const resolvers = {
        );
        return waypoint;
     },
-    addLandmarks: async (parent, { landmarkId }) => {
+    addLandmark: async (parent, { landmarkId }) => {
       const landmark = await Landmarks.create({
         landmarkName, lLocation, hours, cost, contact:{phone, weblink} 
       },
