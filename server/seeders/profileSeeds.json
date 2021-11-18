@@ -2,9 +2,9 @@
   {
     "firstName": "Brian",
     "lastName": "Kernighan",
-    "email":"emailB@mymail.com",
+    "email": "emailB@mymail.com",
     "password": "password1254"
-   },
+  },
   {
     "name": "Max",
     "lastname": "Kanat-Alexander",
@@ -24,10 +24,33 @@
     "password": "password1254"
   },
   {
+    "firstName": "Lolo",
+    "lastname": "Brewer",
+    "email": "lolo@mymail.com",
+    "password": "password1254"
+  },
+  {
+    "firstName": "Liz",
+    "lastname": "Ireland",
+    "email": "lizA@mymail.com",
+    "password": "password1254"
+  },
+  {
+    "firstName": "Maria",
+    "lastname": "Gugol",
+    "email": "maria@mymail.com",
+    "password": "password1254"
+  },
+  {
+    "firstName": "Chris",
+    "lastname": "Condreay",
+    "email": "chris@mymail.com",
+    "password": "password1254"
+  },
+  {
     "firstName": "Edward V.",
     "lastname": "Berard",
     "email": "emailEA@mymail.com",
     "password": "password1254"
   }
- 
 ]

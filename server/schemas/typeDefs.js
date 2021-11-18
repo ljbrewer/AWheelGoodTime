@@ -10,30 +10,34 @@ const typeDefs = gql`
   type Trip {
     _id: ID!
     tripName: String!
-    datetostartTrip: Date
+    datetostartTrip: String
     startLocation: [String]!
     endLocation:[String]!
   },
-  type waypoints {
+  type waypoint {
     _id: ID!
     waypointName: String!
     wLocation: String
    }
-  type landmarks {
+  type landmark {
     _id: ID!
     landmarkName: String!
     lLocation: String
+  }
+  type Auth{
+    token: ID!
+    profile: Profile
   }
 
   type Query {
     profiles: [Profile]!
     profile(profileId: ID!): Profile
-    Trips: [Trip]!
-    Trips(tripId: ID!): Trip
+    trips: [Trip]!
+    trip(tripId: ID!): Trip
     waypoints: [waypoint]!
-    waypoints(waypointId: ID!): waypoint
+    waypoint(waypointId: ID!): waypoint
     landmarks: [landmark]!
-    landmarks(landmarkId: ID!): landmark
+    landmark(landmarkId: ID!): landmark
   }
 
   type Mutation {
@@ -42,11 +46,13 @@ const typeDefs = gql`
     removeProfile(profileId: ID!): Profile
     removeEmail(profileId: ID!, email: String!): Profile
     addTrip(tripName: String!): Trip
-    addWaypoint(waypointName: String!): waypoints
-    addLandmark(LandmarkName: String!): landmarks
+    addWaypoint(waypointName: String!): waypoint
+    addLandmark(LandmarkName: String!): landmark
     removeTrip(tripId: ID!): Trip
-    removeWaypoint(waypointid: ID!): waypoints
-    removeLandmark(Landmarkid: ID!): landmarks
+    removeWaypoint(waypointid: ID!): waypoint
+    removeLandmark(Landmarkid: ID!): landmark
+    login(email:String!, password:String!): Auth
+   
   }
 `;
 

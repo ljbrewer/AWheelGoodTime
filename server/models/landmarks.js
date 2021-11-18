@@ -47,6 +47,6 @@ const landmarkSchema = new Schema({
         },
     ],
 })
-const landmark = model('landmark', landmarkSchema);
+const Landmark = model('Landmark', landmarkSchema);
 
-module.exports = landmark;
+module.exports = Landmark;
