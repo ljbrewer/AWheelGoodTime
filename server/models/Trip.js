@@ -10,7 +10,7 @@ const tripSchema = new Schema({
             trim: true,
         },
         datetostartTrip: {
-            type: datetostartTrip,
+            type: String,
             trim: true,
         },
         startLocation: {
