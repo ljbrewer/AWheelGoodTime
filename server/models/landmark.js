@@ -25,14 +25,14 @@ const landmarkSchema = new Schema({
     cost:{
         type: String,
     },
-    contact:{
+    contact:[{
         phone:{
             type: String,
         },
         weblink:{
             wlink: String,
         },
-    },
+    }],
 
     owner: [
         {
