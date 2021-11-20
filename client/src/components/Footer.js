@@ -3,7 +3,7 @@ import React from 'react';
 
 const styles = {
     foot: {
-        background: '#f9b713',
+        background: '#95d7ae',
         position: 'fixed',
         bottom: 0,
         width: '100%',
