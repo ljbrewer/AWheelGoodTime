@@ -39,16 +39,19 @@ const WayPoints = () => {
   }
   return (
     <div>
-      <h2 className="card-header">
-        {WayPoints.name}'s friends have endorsed these skills...
-      </h2>
-
-      {WayPoints.skills?.length > 0 && <SkillsList skills={WayPoints.skills} />}
-
-      <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
-        <SkillForm WayPointsId={WayPoints._id} />
-      </div>
-    </div>
+    <h1>Home Page</h1>
+    <form className="form">
+    <input
+        // value={cityName}
+        name="cityName"
+        onChange={handleInputChange}
+        type="text"
+        placeholder="cityname"
+      />
+      <button type="button" onClick={handleFormSubmit}>Find a City</button>
+      </form>
+    <p>Insert some shit here</p>
+  </div>
   );
 };
 
