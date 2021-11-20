@@ -23,6 +23,17 @@ displayCity: function (){
 
 }
 };
+const handleInputChange = (e) => {
+  const { target } = e;
+  const inputType = target.cityName;
+  const inputvalue = target.value;
+}
+
+const handleFormSubmit = (e) => {
+  e.preventDefault();
+  cityName = cityName;
+  console.log(cityName)
+}
 cityName.fetchCity()
 
 const WayPoints = () => {
@@ -41,16 +52,15 @@ const WayPoints = () => {
     <div>
     <h1>Home Page</h1>
     <form className="form">
-    <input
-        // value={cityName}
-        name="cityName"
-        onChange={handleInputChange}
-        type="text"
-        placeholder="cityname"
-      />
-      <button type="button" onClick={handleFormSubmit}>Find a City</button>
-      </form>
-    <p>Insert some shit here</p>
+      <input
+          inputvalue={cityName}
+          name="cityName"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="cityname"
+        />
+        <button type="button" onClick={handleFormSubmit}>Find a City</button>
+        </form>
   </div>
   );
 };
