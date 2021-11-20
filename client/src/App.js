@@ -1,12 +1,13 @@
 import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import PageContainer from "./components/PageContainer";
 
-// import PortfolioContainer from "./components/PortfolioContainer";
+
 
 const App = () => <div>
     <Header />
-    {/* <PortfolioContainer /> */}
+    <PageContainer />
     <Footer />
     
     </div>

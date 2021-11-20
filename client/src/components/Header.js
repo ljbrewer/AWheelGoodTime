@@ -1,13 +1,18 @@
 import React from 'react';
-// Here we are importing a CSS file as a dependency
-import '../styles/Header.css';
 
+const styles = {
+    head: {
+        background: '#95d7ae',
+        
+},
+};
 function Header(){
     return (
+        <div style={styles.head}>
         <header className="header">
             <h1>header</h1>
         </header>
-        
+        </div>
     );
 }
 
