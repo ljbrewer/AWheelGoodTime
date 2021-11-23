@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import PageContainer from "./components/PageContainer";
 
 const client = new ApolloClient({
-  url: '/graphql',
+  uri: '/graphql',
   cache: new InMemoryCache(),
 });
 
@@ -18,12 +18,19 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
       <div className="flex-column justify-flex-start min-100-vh">
+        
         <Header />
+        
+        
+       
         <div className="container">
           <PageContainer />
-          
-        </div>
+          </div>
+        
+
+        
         <Footer />
+        
       </div>
       </Router>
      </ApolloProvider>
