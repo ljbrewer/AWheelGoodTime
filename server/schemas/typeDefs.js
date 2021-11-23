@@ -6,14 +6,14 @@ const typeDefs = gql`
     firstName: String!
     lastName: String!
     email: [String]!
-  },
+  }
   type Trip {
     _id: ID!
     tripName: String!
     datetostartTrip: String
     startLocation: [String]!
     endLocation:[String]!
-  },
+  }
   type waypoint {
     _id: ID!
     waypointName: String!
@@ -29,6 +29,17 @@ const typeDefs = gql`
     profile: Profile
   }
 
+  type Geoname{
+    name: String
+    country: String
+    lat:Float
+    lon:Float
+    population: Int
+    timezone:String
+    status: String
+
+  }
+
   type Query {
     profiles: [Profile]!
     profile(profileId: ID!): Profile
@@ -38,6 +49,7 @@ const typeDefs = gql`
     waypoint(waypointId: ID!): waypoint
     landmarks: [landmark]!
     landmark(landmarkId: ID!): landmark
+    geoname(name: String!): Geoname
   }
 
   type Mutation {

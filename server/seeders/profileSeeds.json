@@ -1,29 +1,5 @@
 [
   {
-    "firstName": "Brian",
-    "lastName": "Kernighan",
-    "email": "emailB@mymail.com",
-    "password": "password1254"
-  },
-  {
-    "name": "Max",
-    "lastname": "Kanat-Alexander",
-    "email": "emailM@mymail.com",
-    "password": "password1254"
-  },
-  {
-    "name": "Amiko",
-    "lastname": "Kan-Alex",
-    "email": "emailA@mymail.com",
-    "password": "password1254"
-  },
-  {
-    "name": "Kent",
-    "lastname": "Beck",
-    "email": "emailKA@mymail.com",
-    "password": "password1254"
-  },
-  {
     "firstName": "Lolo",
     "lastname": "Brewer",
     "email": "lolo@mymail.com",
