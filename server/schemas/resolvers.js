@@ -38,7 +38,7 @@ const resolvers = {
 
     geoname: async(parent,{ name, country })=> {
       
-      const response = await axios.get(`https://api.opentripmap.com/0.1/en/places/geoname?name=${name}&apikey=${KeyboardEvent}`)
+      const response = await axios.get(`https://api.opentripmap.com/0.1/en/places/geoname?name=${name}&apikey=${key}`)
       return response.data
     }
 
