@@ -5,15 +5,11 @@ import { useQuery } from '@apollo/client';
 
 
 import {QUERY_WAYPOINTS } from '../utils/queries';
-
 let cityName = {
 fetchCity: function (Cityname) {
   let name = "San%20Francisco";
-let apiKey = "5ae2e3f221c38a28845f05b6a30e2a4eca4c4f97eaab63cf9407abda";
 fetch("https://api.opentripmap.com/0.1/en/places/geoname?name="
-+ name
-+ "&apikey=" 
-+ apiKey)
++ name)
 .then((response) => response.json())
         .then((data) => this.displayCity(data))
 },
