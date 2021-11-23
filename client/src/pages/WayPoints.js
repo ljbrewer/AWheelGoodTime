@@ -3,8 +3,6 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
-import SkillsList from '../components/SkillsList';
-import SkillForm from '../components/SkillForm';
 
 import {QUERY_WAYPOINTS } from '../utils/queries';
 
@@ -48,9 +46,10 @@ const WayPoints = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
+
   return (
     <div>
-    <h1>Home Page</h1>
+    <h1>Map Your Waypoints</h1>
     <form className="form">
       <input
           inputvalue={cityName}
@@ -63,6 +62,6 @@ const WayPoints = () => {
         </form>
   </div>
   );
-};
 
+};
 export default WayPoints;
