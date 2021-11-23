@@ -1,0 +1,43 @@
+[{
+    "waypointName": "Shell Gas Station",
+    "wLocation": "1256 Street, SF, CA",
+    "lodging.name": "",
+    "lodging.haddress": "",
+    "lodging.hPhone":"",
+    "ConfirmationNo":""
+    
+  },
+{
+  "waypointName": "Restrooms",
+  "wLocation": "854 Fake Street, Stockton, CA",
+  "lodging.name": "",
+  "lodging.haddress": "",
+  "lodging.hPhone": "",
+  "ConfirmationNo": ""
+},
+{
+  "waypointName": "Restaurant",
+  "wLocation": "1256 Street, Lodi, CA",
+  "lodging.name": "",
+  "lodging.haddress": "",
+  "lodging.hPhone": "1253698745",
+  "ConfirmationNo": "something.com"
+},
+{
+  "waypointName": "Merced Motel 6",
+  "wLocation": "1256 Street, SF, CA",
+  "lodging.name": "office open until 11pm",
+  "lodging.haddress": "$85 per night",
+  "lodging.hPhone": "1253698745",
+  "ConfirmationNo": "something.com"
+},
+{
+  "waypointName": "Texaco Gas Station",
+  "wLocation": "856 SomeStreet, Bakersfield, CA",
+  "lodging.name": "",
+  "lodging.haddress": "",
+  "lodging.hPhone": "",
+  "ConfirmationNo": ""
+}
+
+]

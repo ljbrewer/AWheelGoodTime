@@ -1,0 +1,54 @@
+[
+  {
+    "tripName": "Myfirst Trip",
+    "datetostartTrip": "May 2, 2022",
+    "startLocation": "Dixon CA",
+    "endLocation": "DisneyLand, Anahiem, Ca",
+    "lodging.hname":"Disneyland Hotel",
+    "lodging.hAddress":"Downtoun Disney",
+    "lodging.ConfirmationNo":"87rthbrth14584",
+    "lodging.hPhone":"9563214789"
+
+  },
+  {
+    "tripName": "Lolo's Trip",
+    "datetostartTrip": "Feb 1, 2022",
+    "startLocation": "Dixon CA",
+    "endLocation": "DisneyLand, Anahiem, Ca",
+    "lodging.hname": "Disneyland Hotel",
+    "lodging.hAddress": "Downtoun Disney",
+    "lodging.ConfirmationNo": "87bejkbt14584",
+    "lodging.hPhone": "9563214789"
+  },
+  {
+    "tripName": "Liz's Trip to Anhesuer",
+    "datetostartTrip": "May 25, 2022",
+    "startLocation": "Long Beach, CA",
+    "endLocation": ", Ca",
+    "lodging.hname": "Fairfield in Hotel",
+    "lodging.hAddress": "1235 East Road, Fairfield,CA",
+    "lodging.ConfirmationNo": "87rth257th14584",
+    "lodging.hPhone": "9551247893"
+  },
+  {
+    "tripName": "Maria's Trip to Denver",
+    "datetostartTrip": "January 3, 2022",
+    "startLocation": "Long Beach, CA",
+    "endLocation": "Denver, Co",
+    "lodging.hname": "Marriot",
+    "lodging.hAddress": "258 Fake Street, Denver, Co",
+    "lodging.ConfirmationNo": "8758422th14584",
+    "lodging.hPhone": "2546398567"
+  },
+  {
+    "tripName": "Chris Trip Half Moon Bay",
+    "datetostartTrip": "May 25, 2022",
+    "startLocation": "Anahiem, CA",
+    "endLocation": "Half Moon Bay, Ca",
+    "lodging.hname": "Best Western Motel",
+    "lodging.hAddress": "4582 MyStreet, Sauslito, CA",
+    "lodging.ConfirmationNo": "24563th14584",
+    "lodging.hPhone": "6245871239"
+  }
+  
+]

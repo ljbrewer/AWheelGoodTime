@@ -1,6 +1,6 @@
 const Trip = require('./Trip');
-const Landmarks = require('./landmarks');
+const Landmark = require('./landmark');
 const Profile = require('./Profile');
-const Waypoints = require('./waypoints');
+const Waypoint = require('./waypoint');
 
-module.exports = { Trip, Landmarks, Profile, Waypoints };
+module.exports = { Trip, Landmark, Profile, Waypoint };

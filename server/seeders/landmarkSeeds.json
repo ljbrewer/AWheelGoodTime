@@ -1,0 +1,51 @@
+[
+  {
+    "landmarkName": "Museum",
+    "lLocation": "1256 Street, SF, CA",
+    "hours": "9-5",
+    "cost": "$25 Adult, $10 Children",
+    "contact.phone":"1253698745",
+    "weblink":"something.com"
+  },
+  {
+    "landmarkName": "Amusement Park",
+    "lLocation": "1200 Street, Santa Clara, CA",
+    "hours": "9-5",
+    "cost": "$75 Adult, $30 Children",
+    "contact.phone": "1253698745",
+    "weblink": "something.com"
+  },
+  {
+    "landmarkName": "Landmark",
+    "lLocation": "365 riddle Way, winters, CA",
+    "hours": "9-5",
+    "cost": "$25 Adult, $10 Children",
+    "contact.phone": "1253698745",
+    "weblink": "something.com"
+  },
+  {
+    "landmarkName": "Arboretum",
+    "lLocation": "7615 Street, Davis, CA",
+    "hours": "9-5",
+    "cost": "$25 Adult, $10 Children",
+    "contact.phone": "1253698745",
+    "weblink": "something.com"
+  },
+  {
+    "landmarkName": "Library",
+    "lLocation": "1256 1st Street, Dixon, CA",
+    "hours": "9-5",
+    "cost": "$25 Adult, $10 Children",
+    "contact.phone": "1253698745",
+    "weblink": "something.com"
+  },
+  {
+    "landmarkName": "Exlporitorium",
+    "lLocation": "Palace of Fine Arts, SF, CA",
+    "hours": "9-5",
+    "cost": "$25 Adult, $10 Children",
+    "contact.phone": "1253698745",
+    "weblink": "something.com"
+  }
+ 
+]

@@ -19,7 +19,7 @@ const waypointSchema = new Schema({
         wLon: {
             type: String,
         },
-        lodging: {
+        lodging: [{
             hName: {
                 type: String,
         },
@@ -29,10 +29,10 @@ const waypointSchema = new Schema({
             ConfirmationNo: {
                 type: String,
         },
-            wPhone:{
+            hPhone:{
                 type: String,
         }
-    },
+    }],
         owner: [
             {
                 type: Schema.Types.ObjectId,
@@ -47,6 +47,6 @@ const waypointSchema = new Schema({
     ],
     })
 
-const waypoint = model('waypoints', waypointSchema);
+const Waypoint = model('Waypoint', waypointSchema);
 
-module.exports = waypoint;
+module.exports = Waypoint;

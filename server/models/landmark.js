@@ -25,14 +25,14 @@ const landmarkSchema = new Schema({
     cost:{
         type: String,
     },
-    contact:{
+    contact:[{
         phone:{
             type: String,
         },
         weblink:{
             wlink: String,
         },
-    },
+    }],
 
     owner: [
         {
@@ -47,6 +47,6 @@ const landmarkSchema = new Schema({
         },
     ],
 })
-const landmark = model('landmark', landmarkSchema);
+const Landmark = model('Landmark', landmarkSchema);
 
-module.exports = landmark;
+module.exports = Landmark;
