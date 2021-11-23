@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NavTabs from './NavTabs';
 import Profile from '../pages/Profile';
 import CreateTrip from '../pages/CreateTrip';
+import WayPoints from '../pages/WayPoints';
 
 
 export default function PageContainer() {
@@ -14,6 +15,8 @@ export default function PageContainer() {
     }
     if (currentPage === 'CreateTrip') {
       return <CreateTrip />;
+    } if (currentPage === 'WayPoints') {
+      return <WayPoints />;
     }
     return <Profile />;
   };
