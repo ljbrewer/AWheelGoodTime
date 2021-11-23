@@ -49,7 +49,7 @@ const typeDefs = gql`
     waypoint(waypointId: ID!): waypoint
     landmarks: [landmark]!
     landmark(landmarkId: ID!): landmark
-    geoname(name: String!): Geoname
+    geoname(name: String!, country:String): Geoname
   }
 
   type Mutation {

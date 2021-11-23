@@ -2,8 +2,8 @@ const { AuthenticationError } = require('apollo-server-express');
 const { Profile, Trip, Waypoint, Landmark } = require('../models');
 const { signToken } = require('../utils/auth');
 const axios = require('axios');
-require('dotenv').config();
-const key=process.env.key;
+
+const key=process.env.KEY;
 
 const resolvers = {
   Query: {
@@ -36,9 +36,9 @@ const resolvers = {
       return landmarks.findOne({ _id: landmarksId });
     },
 
-    geoname: async(parent,{ name, country })=> {
+    geoname: async(parent,{ name, country})=> {
       
-      const response = await axios.get(`https://api.opentripmap.com/0.1/en/places/geoname?name=${name}&apikey=${key}`)
+      const response = await axios.get(`https://api.opentripmap.com/0.1/en/places/geoname?name=${name}&country=${country || "us"}&apikey=${key}`)
       return response.data
     }
 
