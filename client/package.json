@@ -12,8 +12,6 @@
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4",
-    "graphql": "^14.6.0",
-    "react-router-dom": "^5.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

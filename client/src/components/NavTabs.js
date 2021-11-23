@@ -26,6 +26,16 @@ function NavTabs({ currentPage, handlePageChange }) {
           Create a trip
         </a>
       </li>
+      <li className="nav-item">
+        <a
+          href="#WayPoints"
+          onClick={() => handlePageChange('WayPoints')}
+          // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === 'WayPoints' ? 'nav-link active' : 'nav-link'}
+        >
+          Map Your Waypoints
+        </a>
+      </li>
     </ul>
   );
 }

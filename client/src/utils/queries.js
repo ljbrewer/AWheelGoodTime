@@ -94,6 +94,7 @@ export const QUERY_SINGLE_TRIP = gql`
         hPhone
     }
   }
+  }
 `; export const QUERY_SINGLE_LANDMARK = gql`
   query singleLandmark($landmarksId: ID!) {
    landmark(landmarksId: $landmarksId) {
