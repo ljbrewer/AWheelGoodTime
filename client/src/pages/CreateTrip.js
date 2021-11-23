@@ -1,5 +1,5 @@
 import React from 'react';
-import MyForm from '../components/Form/mForm'
+import MyForm from '../components/Form/MyForm'
 
 
 export default function CreateTrip() {
