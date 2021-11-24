@@ -1,0 +1,17 @@
+https://api.opentripmap.com/0.1/en/places/radius?radius=15&lon=-122.41942&lat=37.77493&format=json&limit=10&apikey=5ae2e3f221c38a28845f05b6a30e2a4eca4c4f97eaab63cf9407abda
+
+sample response
+
+
+[
+  {
+    "name": "Oakland City Hall",
+    "osm": "relation/4682064",
+    "xid": "R4682064",
+    "wikidata": "Q932794",
+    "kind": "architecture,other_buildings_and_structures,historic_architecture,interesting_places",
+    "point": {
+      "lon": -122.272705,
+      "lat": 37.80513
+    }
+  

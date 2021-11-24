@@ -40,6 +40,26 @@ const typeDefs = gql`
 
   }
 
+  type Bbox{
+    lonmin:Float
+    lonmax:Float
+    latmin:Float
+    latmax:Float
+    limit:Int
+    kind:String
+    name:String  
+    }
+  }
+
+  type Places{
+    radius:Int
+    lon:Float
+    lat:Float
+    limit:Int 
+    format:String
+    }
+  }
+
   type Query {
     profiles: [Profile]!
     profile(profileId: ID!): Profile
@@ -50,6 +70,8 @@ const typeDefs = gql`
     landmarks: [landmark]!
     landmark(landmarkId: ID!): landmark
     geoname(name: String!, country:String): Geoname
+    bbox(lonmin:Float,lonmax:Float, latmin:Float,latmax:Float,name:String,kind:String,limit:Int):Bbox
+    places(radius:Int,lon:Float, lat:Float,limit:Int):Places
   }
 
   type Mutation {
@@ -64,7 +86,22 @@ const typeDefs = gql`
     removeWaypoint(waypointid: ID!): waypoint
     removeLandmark(Landmarkid: ID!): landmark
     login(email:String!, password:String!): Auth
-   
+    updateTrip(
+     name: String
+     datetostartTrip: String
+     startLocation: String
+     endLocation: String
+    ): Trip
+
+    updateWaypoint(
+     waypointname: String
+     wlocation: String
+    ): waypoint
+
+    updatelandmark(
+     landmarkname: String
+     lLocation: String
+    ): landmark
   }
 `;
 
