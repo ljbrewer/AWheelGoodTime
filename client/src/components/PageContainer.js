@@ -3,7 +3,7 @@ import NavTabs from './NavTabs';
 import Profile from '../pages/Profile';
 import CreateTrip from '../pages/CreateTrip';
 import WayPoints from '../pages/WayPoints';
-
+import {Route} from 'react-router-dom'
 
 export default function PageContainer() {
   const [currentPage, setCurrentPage] = useState('Profile');
@@ -29,6 +29,7 @@ export default function PageContainer() {
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
       {/* Here we are calling the renderPage method which will return a component  */}
       {renderPage()}
+      
     </div>
   );
 }
