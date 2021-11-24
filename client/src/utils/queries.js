@@ -19,24 +19,25 @@ export const QUERY_SINGLE_PROFILE = gql`
     }
   }
 `;
-
 export const QUERY_TRIPS = gql`
   query allTrips {
     trips {
       _id
-      tripname
+      tripName
       datetostartTrip
-      startLocation
-      endLocation
-      lodging{
-        hName
-        hAddress
-        ConfirmationNo
-        hPhone
-      }
+      # startLocation
+      # endLocation
+      # lodging{
+      #   hName
+      #   hAddress
+      #   ConfirmationNo
+      #   hPhone
+      # }
     }
   }
-`; export const QUERY_WAYPOINTS = gql`
+`;
+
+export const QUERY_WAYPOINTS = gql`
   query allWaypoints {
     waypoints {
       _id
