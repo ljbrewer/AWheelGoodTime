@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PageContainer from "./components/PageContainer";
+// import SingleTrip from './components/SingleTrip';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -26,6 +27,7 @@ function App() {
         <div className="container">
           <PageContainer />
           </div>
+          
         
 
         
