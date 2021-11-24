@@ -77,3 +77,4 @@ export const ADD_LANDMARK = gql`
     }
   }
 `;
+

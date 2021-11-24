@@ -1,0 +1,205 @@
+https://api.opentripmap.com/0.1/en/places/bbox?lon_min=-123.41942&lon_max=-121.41942&lat_min=35.77493&lat_max=37.77493&limit=10&apikey=5ae2e3f221c38a28845f05b6a30e2a4eca4c4f97eaab63cf9407abda
+
+
+
+https://api.opentripmap.com/0.1/en/places/bbox?lon_min=-100&lon_max=-95&lat_min=37.58157&lat_max=39.58157&kinds=accomodations&name=zoo&limit=10&apikey=5ae2e3f221c38a28845f05b6a30e2a4eca4c4f97eaab63cf9407abda
+
+
+sample response for this call
+
+
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "112680",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.901016,
+          36.617271
+        ]
+      },
+      "properties": {
+        "xid": "W224370053",
+        "name": "Pacific Biological Labortories",
+        "rate": 7,
+        "osm": "way/224370053",
+        "wikidata": "Q7122315",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "148366",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41468,
+          37.762318
+        ]
+      },
+      "properties": {
+        "xid": "W242973692",
+        "name": "Pioneer Building",
+        "rate": 7,
+        "osm": "way/242973692",
+        "wikidata": "Q7196809",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "167077",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.901627,
+          36.306351
+        ]
+      },
+      "properties": {
+        "xid": "W255390082",
+        "name": "Point Sur Lighthouse",
+        "rate": 7,
+        "osm": "way/255390082",
+        "wikidata": "Q7208173",
+        "kinds": "lighthouses,towers,architecture,interesting_places,other_towers"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "735174",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.678848,
+          36.700954
+        ]
+      },
+      "properties": {
+        "xid": "N2797913977",
+        "name": "Boronda History Center",
+        "rate": 7,
+        "osm": "node/2797913977",
+        "wikidata": "Q6279359",
+        "kinds": "museums,cultural,interesting_places,other_museums"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "877416",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.510216,
+          37.769474
+        ]
+      },
+      "properties": {
+        "xid": "N417235672",
+        "name": "Beach Chalet",
+        "rate": 7,
+        "osm": "node/417235672",
+        "wikidata": "Q29641753",
+        "kinds": "historic_architecture,architecture,interesting_places,restaurants,foods,tourist_facilities,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1472202",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3451,
+          37.579975
+        ]
+      },
+      "properties": {
+        "xid": "N2160213348",
+        "name": "Burlingame",
+        "rate": 7,
+        "osm": "node/2160213348",
+        "wikidata": "Q4999169",
+        "kinds": "industrial_facilities,railway_stations,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "1938353",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.158424,
+          37.724251
+        ]
+      },
+      "properties": {
+        "xid": "N3529567314",
+        "name": "Casa Peralta",
+        "rate": 7,
+        "osm": "node/3529567314",
+        "wikidata": "Q14681713",
+        "kinds": "historic_architecture,architecture,interesting_places,other_buildings_and_structures"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3205045",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.890511,
+          37.337845
+        ]
+      },
+      "properties": {
+        "xid": "N6454057431",
+        "name": "Trinity Episcopal Church",
+        "rate": 7,
+        "osm": "node/6454057431",
+        "wikidata": "Q7842726",
+        "kinds": "religion,cathedrals,interesting_places"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3474670",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.943596,
+          37.2887
+        ]
+      },
+      "properties": {
+        "xid": "W207054563",
+        "name": "Ainsley House",
+        "rate": 7,
+        "osm": "way/207054563",
+        "wikidata": "Q4697483",
+        "kinds": "museums,cultural,interesting_places,other_museums"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "3474765",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.229652,
+          37.487019
+        ]
+      },
+      "properties": {
+        "xid": "W240212008",
+        "name": "San Mateo County History Museum",
+        "rate": 7,
+        "osm": "way/240212008",
+        "wikidata": "Q24063771",
+        "kinds": "museums,cultural,interesting_places,other_museums"
+      }
+    }
+  ]
+}
