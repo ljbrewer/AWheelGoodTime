@@ -40,9 +40,16 @@ const resolvers = {
       
       const response = await axios.get(`https://api.opentripmap.com/0.1/en/places/geoname?name=${name}&country=${country || "us"}&apikey=${key}`)
       return response.data
+    },
+
+    bbox: async(parent,{lonmin,latmax,latmin,latmax,limit,kind,name})=> {
+      const response = await axios.get(`https://api.opentripmap.com/0.1/en/places/bbox?lon_min=${lonmin}&lon_max=${latmax}&lat_min=${latmin}&lat_max=${latmax}&kinds=${kind || "interesting_places"}&name=${name || ""}&limit=${limit || 10}&apikey=key`)
+      return response.data
+    },
+
+    placees: async(parent,{ radius, lon, lat, format, limit})=> {
+      const response = await axios.get(`https://api.opentripmap.com/0.1/en/places/radius?radius=${radius}&lon=${lon}&lat=${lat}&format="json"&limit=${limit || 10}&apikey=key`)
     }
-
-
 
 
   },
