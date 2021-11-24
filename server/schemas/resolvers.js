@@ -1,6 +1,9 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile, Trip, Waypoint } = require('../models');
+const { Profile, Trip, Waypoint, Landmark } = require('../models');
 const { signToken } = require('../utils/auth');
+const axios = require('axios');
+
+const key=process.env.KEY;
 
 const resolvers = {
   Query: {
@@ -29,9 +32,26 @@ const resolvers = {
       return landmarks.find();
     },
 
-    landmark: async (parent, { landmarks}) => {
+    landmark: async (parent, { landmarkId}) => {
       return landmarks.findOne({ _id: landmarksId });
     },
+
+    geoname: async(parent,{ name, country})=> {
+      
+      const response = await axios.get(`https://api.opentripmap.com/0.1/en/places/geoname?name=${name}&country=${country || "us"}&apikey=${key}`)
+      return response.data
+    },
+
+    bbox: async(parent,{lonmin,latmax,latmin,latmax,limit,kind,name})=> {
+      const response = await axios.get(`https://api.opentripmap.com/0.1/en/places/bbox?lon_min=${lonmin}&lon_max=${latmax}&lat_min=${latmin}&lat_max=${latmax}&kinds=${kind || "interesting_places"}&name=${name || ""}&limit=${limit || 10}&apikey=key`)
+      return response.data
+    },
+
+    placees: async(parent,{ radius, lon, lat, format, limit})=> {
+      const response = await axios.get(`https://api.opentripmap.com/0.1/en/places/radius?radius=${radius}&lon=${lon}&lat=${lat}&format="json"&limit=${limit || 10}&apikey=key`)
+    }
+
+
   },
 
   Mutation: {
