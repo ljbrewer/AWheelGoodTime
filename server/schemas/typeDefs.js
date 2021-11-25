@@ -79,7 +79,7 @@ const typeDefs = gql`
     addEmail(profileId: ID!, email: String!): Profile
     removeProfile(profileId: ID!): Profile
     removeEmail(profileId: ID!, email: String!): Profile
-    addTrip(tripName: String!): Trip
+    addTrip(tripName: String!, datetostartTrip: String, startLocation: String, endLocation: String): Trip
     addWaypoint(waypointName: String!): waypoint
     addLandmark(LandmarkName: String!): landmark
     removeTrip(tripId: ID!): Trip

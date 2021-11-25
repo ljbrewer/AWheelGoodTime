@@ -14,20 +14,19 @@ export const ADD_PROFILE = gql`
 `;
 
 export const ADD_TRIP= gql`
-  mutation addTrip($tripId: ID!, $tripName: String!) {
-    addTrip(tripId: $tripId ) {
+  mutation addTrip($tripName: String!, $datetostartTrip:String, $startLocation:String, $endLocation:String ) {
+    addTrip(tripName: $tripName, datetostartTrip: $datetostartTrip, startLocation: $startLocation, endLocation: $endLocation) {
        _id
-      tripname
+      tripName
       datetostartTrip
       startLocation
       endLocation
-      lodging{
-        hName
-        hAddress
-        ConfirmationNo
-        hPhone
-      }
-    
+      # lodging{
+      #   hName
+      #   hAddress
+      #   ConfirmationNo
+      #   hPhone
+      # }
     }
   }
 `;

@@ -78,15 +78,14 @@ const resolvers = {
       return { token, profile };
     },
 
-    addTrip: async (parent, {tripid }) => {
-      const trip = await Trip.create({tripName, datetostartTrip,startLocation,endLocation,lodging:{hName, hAddress, ConfirmationNo,hPhone},});
-
-      await Trip.findOneAndUpdate(
-        { _id: tripId },
-        {
-          $addToSet: { trip: trip._id },
-        },
-      );
+    addTrip: async (parent, {tripName,datetostartTrip,startLocation,endLocation }) => {
+      const trip = await Trip.create({tripName, datetostartTrip,startLocation,endLocation,});
+      // await Trip.findOneAndUpdate(
+      //   { _id: tripId },
+      //   {
+      //     $addToSet: { trip: trip._id },
+      //   },
+      // );
       return trip;
     },
     addWaypoint: async (parent,{waypointId}) =>{
