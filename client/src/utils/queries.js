@@ -109,5 +109,31 @@ export const QUERY_SINGLE_TRIP = gql`
         weblink
       }
     }
+  }`; export const QUERY_MANY_WAYPOINT = gql`
+  query manyWaypoint($manyWaypointId: ID!) {
+    manyWaypoint(manyWaypointId: $manyWaypointId) {
+       _id
+      landmarkname
+      lLocation
+      hours
+      cost
+      contact {
+        phone
+        weblink
+      }
+    }
   }
 `;
+export const QUERY_GEONAME = gql`
+query geoname($name:String!) {
+  geoname(name: $name) {
+    name
+    country
+    lat
+    lon
+    population
+    timezone
+    status
+  }
+}
+` 

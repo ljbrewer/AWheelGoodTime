@@ -1,9 +1,11 @@
 import { useState } from "react";
-// import ReactDOM from "react-dom";
+import { useLazyQuery } from '@apollo/client';
+import { QUERY_GEONAME } from "../../utils/queries";
 import '../Form/style.css'
 
 export default function CityForm() {
   const [inputs, setInputs] = useState({});
+  const [findGeoname, { loading, error, value }] = useLazyQuery(QUERY_GEONAME);
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -12,11 +14,12 @@ export default function CityForm() {
 
   }
 
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(inputs);
     saveToLocal()
-    getLocalStorage ()
+    getLocalStorage()
   }
 
 function saveToLocal () {
@@ -24,12 +27,16 @@ function saveToLocal () {
 }
 
 function getLocalStorage () {
- let city = localStorage.getItem("City Name", (inputs.name))
+ let city = localStorage.setItem("City Name", (inputs.name))
 console.log(city)
 }
 
+ 
+// if (loading) return <p>Loading ...</p>;
+// if (error) return `Error! ${error}`;
+
   return (
-     
+     <>
     <form onSubmit={handleSubmit}>
       <label>City Name:
       <input 
@@ -39,8 +46,10 @@ console.log(city)
         onChange={handleChange}
       />
       </label>
-        <input type="submit" />
+      <button type="submit" onClick={() => findGeoname({ variables: { name:inputs.name } })}>Find Something</button>
     </form>
-    
-  )
+
+    </>
+  );
+
 }
