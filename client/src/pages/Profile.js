@@ -23,6 +23,7 @@ console.log(data)
         {/* > */}
       {data.trips.map(trip => <div key={trip._id}>{trip.tripName}</div>)}
       {/* </Link> */}
+
       
       </span>
     </div>
