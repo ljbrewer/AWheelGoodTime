@@ -17,7 +17,7 @@ export const ADD_TRIP= gql`
   mutation addTrip($tripId: ID!, $tripName: String!) {
     addTrip(tripId: $tripId ) {
        _id
-      tripname
+      tripame
       datetostartTrip
       startLocation
       endLocation
@@ -31,6 +31,8 @@ export const ADD_TRIP= gql`
     }
   }
 `;
+
+
 
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
