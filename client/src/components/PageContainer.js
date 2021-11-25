@@ -3,6 +3,7 @@ import NavTabs from './NavTabs';
 import Profile from '../pages/Profile';
 import CreateTrip from '../pages/CreateTrip';
 import WayPoints from '../pages/WayPoints';
+import Landmarks from '../pages/Landmarks';
 import {Route} from 'react-router-dom'
 // import SingleTrip from './SingleTrip';
 
@@ -18,6 +19,9 @@ export default function PageContainer() {
       return <CreateTrip />;
     } if (currentPage === 'WayPoints') {
       return <WayPoints />;
+    }
+    if (currentPage === 'Landmarks'){
+      return <Landmarks/>
     }
     // if (currentPage === 'SingleTrip') {
     //   return <SingleTrip />;

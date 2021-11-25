@@ -126,7 +126,7 @@ export const QUERY_SINGLE_TRIP = gql`
 `;
 export const QUERY_GEONAME = gql`
 query geoname($name:String!) {
-  geoname(name: $name) {
+  geoname(name: $city) {
     name
     country
     lat
