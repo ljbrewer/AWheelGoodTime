@@ -17,7 +17,7 @@ export const ADD_TRIP= gql`
   mutation addTrip($tripId: ID!, $tripName: String!) {
     addTrip(tripId: $tripId ) {
        _id
-      tripame
+      tripname
       datetostartTrip
       startLocation
       endLocation
