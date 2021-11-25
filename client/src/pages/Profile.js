@@ -16,7 +16,7 @@ console.log(data)
   return (
     <div>
       <h1>User's profile</h1>
-      <p>
+      <span>
         {/* <Link 
         className="btn btn-block btn-squared btn-light text-dark"
         to={`/profiles/${data.trips._id}`} */}
@@ -24,7 +24,7 @@ console.log(data)
       {data.trips.map(trip => <div key={trip._id}>{trip.tripName}</div>)}
       {/* </Link> */}
       
-      </p>
+      </span>
     </div>
 
     
