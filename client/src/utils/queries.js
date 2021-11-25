@@ -70,16 +70,16 @@ export const QUERY_SINGLE_TRIP = gql`
   query singleTrip($tripId: ID!) {
     trip(tripId: $tripId) {
        _id
-      tripname
+      tripName
       datetostartTrip
-      startLocation
-      endLocation
-      lodging{
-        hName
-        hAddress
-        ConfirmationNo
-        hPhone
-      }
+      # startLocation
+      # endLocation
+      # lodging{
+      #   hName
+      #   hAddress
+      #   ConfirmationNo
+      #   hPhone
+      # }
     }
   }
 `; export const QUERY_SINGLE_WAYPOINT = gql`
@@ -109,5 +109,31 @@ export const QUERY_SINGLE_TRIP = gql`
         weblink
       }
     }
+  }`; export const QUERY_MANY_WAYPOINT = gql`
+  query manyWaypoint($manyWaypointId: ID!) {
+    manyWaypoint(manyWaypointId: $manyWaypointId) {
+       _id
+      landmarkname
+      lLocation
+      hours
+      cost
+      contact {
+        phone
+        weblink
+      }
+    }
   }
 `;
+export const QUERY_GEONAME = gql`
+query geoname($name:String!) {
+  geoname(name: $city) {
+    name
+    country
+    lat
+    lon
+    population
+    timezone
+    status
+  }
+}
+` 

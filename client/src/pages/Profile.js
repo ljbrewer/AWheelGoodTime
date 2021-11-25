@@ -17,7 +17,7 @@ console.log(data)
     <div>
       <h1>User's profile</h1>
       <p>
-      {data.trips.map(trip => <div key={trip._id}>{trip.tripName}</div>)}
+      {/* {data.trips.map(trip => <div key={trip._id}>{trip.tripName}</div>)} */}
       
       </p>
     </div>
