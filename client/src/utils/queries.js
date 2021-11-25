@@ -70,16 +70,16 @@ export const QUERY_SINGLE_TRIP = gql`
   query singleTrip($tripId: ID!) {
     trip(tripId: $tripId) {
        _id
-      tripname
+      tripName
       datetostartTrip
-      startLocation
-      endLocation
-      lodging{
-        hName
-        hAddress
-        ConfirmationNo
-        hPhone
-      }
+      # startLocation
+      # endLocation
+      # lodging{
+      #   hName
+      #   hAddress
+      #   ConfirmationNo
+      #   hPhone
+      # }
     }
   }
 `; export const QUERY_SINGLE_WAYPOINT = gql`

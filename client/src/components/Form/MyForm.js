@@ -1,9 +1,27 @@
 import { useState } from "react";
-// import ReactDOM from "react-dom";
-import '../Form/style.css'
+import '../Form/style.css';
+import { useMutation } from '@apollo/client';
+import { ADD_TRIP } from "../../utils/mutations";
+import { QUERY_SINGLE_TRIP } from "../../utils/queries";
 
 export default function MyForm() {
   const [inputs, setInputs] = useState({});
+
+  const [addTrip, {error}] = useMutation(ADD_TRIP, {
+    update(cache, { data:{ addTrip }}) {
+      try{
+        const { trip } = cache.readQuery({ query: QUERY_SINGLE_TRIP });
+
+        cache.writeQuery({
+          query:QUERY_SINGLE_TRIP,
+          data: {trip: [...trip, addTrip] },
+        });
+
+      }catch (error){
+        console.log(error)
+      }
+    },
+  });
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -11,10 +29,18 @@ export default function MyForm() {
     setInputs(values => ({...values, [name]: value}))
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(inputs);
-  }
+
+    try{
+      const { data } = await addTrip
+      setInputs('');
+      console.log(inputs);
+    } catch (error) {
+      console.log (error)
+    }
+   
+  };
 
   return (
      

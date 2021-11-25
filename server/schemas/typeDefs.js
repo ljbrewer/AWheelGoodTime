@@ -48,8 +48,8 @@ const typeDefs = gql`
     limit:Int
     kind:String
     name:String  
-    }
   }
+ 
 
   type Places{
     radius:Int
@@ -58,7 +58,7 @@ const typeDefs = gql`
     limit:Int 
     format:String
     }
-  }
+  
 
   type Query {
     profiles: [Profile]!
