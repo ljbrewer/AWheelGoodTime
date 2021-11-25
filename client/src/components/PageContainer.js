@@ -4,6 +4,7 @@ import Profile from '../pages/Profile';
 import CreateTrip from '../pages/CreateTrip';
 import WayPoints from '../pages/WayPoints';
 import {Route} from 'react-router-dom'
+// import SingleTrip from './SingleTrip';
 
 export default function PageContainer() {
   const [currentPage, setCurrentPage] = useState('Profile');
@@ -18,6 +19,9 @@ export default function PageContainer() {
     } if (currentPage === 'WayPoints') {
       return <WayPoints />;
     }
+    // if (currentPage === 'SingleTrip') {
+    //   return <SingleTrip />;
+    // }
     return <Profile />;
   };
 

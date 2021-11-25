@@ -48,8 +48,8 @@ const typeDefs = gql`
     limit:Int
     kind:String
     name:String  
-    }
   }
+ 
 
   type Places{
     radius:Int
@@ -58,7 +58,7 @@ const typeDefs = gql`
     limit:Int 
     format:String
     }
-  }
+  
 
   type Query {
     profiles: [Profile]!
@@ -79,13 +79,14 @@ const typeDefs = gql`
     addEmail(profileId: ID!, email: String!): Profile
     removeProfile(profileId: ID!): Profile
     removeEmail(profileId: ID!, email: String!): Profile
-    addTrip(tripName: String!): Trip
+    addTrip(tripName: String!, datetostartTrip: String, startLocation: String, endLocation: String): Trip
     addWaypoint(waypointName: String!): waypoint
     addLandmark(LandmarkName: String!): landmark
     removeTrip(tripId: ID!): Trip
     removeWaypoint(waypointid: ID!): waypoint
     removeLandmark(Landmarkid: ID!): landmark
     login(email:String!, password:String!): Auth
+    
     updateTrip(
      name: String
      datetostartTrip: String
