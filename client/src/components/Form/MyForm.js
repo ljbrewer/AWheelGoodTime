@@ -93,6 +93,7 @@ export default function MyForm() {
         <input
           type="text"
           placeholder="Address"
+
           name="address"
           value={inputs.address || ""}
           onChange={handleChange}
