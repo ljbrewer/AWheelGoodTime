@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 
@@ -17,12 +17,12 @@ console.log(data)
     <div>
       <h1>User's profile</h1>
       <p>
-        <Link 
+        {/* <Link 
         className="btn btn-block btn-squared btn-light text-dark"
-        to={`/profiles/${data.trips._id}`}
-        >
+        to={`/profiles/${data.trips._id}`} */}
+        {/* > */}
       {data.trips.map(trip => <div key={trip._id}>{trip.tripName}</div>)}
-      </Link>
+      {/* </Link> */}
       
       </p>
     </div>
