@@ -86,6 +86,7 @@ const typeDefs = gql`
     removeWaypoint(waypointid: ID!): waypoint
     removeLandmark(Landmarkid: ID!): landmark
     login(email:String!, password:String!): Auth
+    
     updateTrip(
      name: String
      datetostartTrip: String
