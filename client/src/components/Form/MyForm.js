@@ -99,26 +99,7 @@ export default function MyForm() {
           onChange={handleChange}
         />
         </label>
-        <label>
-        <input 
-          type="time" 
-          placeholder="check in"
-          name="checkin" 
-          value={inputs.checkin || ""} 
-          onChange={handleChange}
-        />
-        </label>
-        <label>
-        <input 
-          type="time" 
-          placeholder="Checkout"
-          name="checkout" 
-          value={inputs.checkout || ""} 
-          onChange={handleChange}
-        />
-        </label>
-
-
+        
         <input type="submit" />
     </form>
     
