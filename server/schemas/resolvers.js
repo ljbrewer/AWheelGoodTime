@@ -47,7 +47,7 @@ const resolvers = {
       return response.data
     },
 
-    placees: async(parent,{ radius, lon, lat, format, limit})=> {
+    places: async(parent,{ radius, lon, lat, format, limit})=> {
       const response = await axios.get(`https://api.opentripmap.com/0.1/en/places/radius?radius=${radius}&lon=${lon}&lat=${lat}&format="json"&limit=${limit || 10}&apikey=key`)
     }
 
