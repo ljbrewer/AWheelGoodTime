@@ -46,7 +46,7 @@ export const LOGIN_USER = gql`
   }
 `;
 export const ADD_WAYPOINT = gql`
-  mutation addwaypoint($waypointId: ID!, $waypointName: String!) {
+  mutation addWaypoint($waypointId: ID!, $waypointName: String!) {
     addWaypoint(waypointId: $waypointId ) {
        _id
      waypointname
