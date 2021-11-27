@@ -23,6 +23,12 @@ const profileSchema = new Schema({
       allowNull: false,
       minlength: 8,
     },
+  trips: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Trip',
+    },
+  ],
   })
 const Profile = model('Profile', profileSchema);
 
