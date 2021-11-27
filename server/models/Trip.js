@@ -53,6 +53,18 @@ const tripSchema = new Schema({
             ref: 'Profile',
         },
      ],
+        waypoints: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Waypoint',
+        },
+     ],
+        landmarks: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Landmarks',
+        },
+     ],
     })
 const Trip = model('Trip', tripSchema);
 
