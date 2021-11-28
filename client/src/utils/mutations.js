@@ -31,6 +31,23 @@ export const ADD_TRIP= gql`
   }
 `;
 
+export const UPDATE_TRIP= gql`
+  mutation updateTrip($tripName: String!, $datetostartTrip:String, $startLocation:String, $endLocation:String ) {
+    addTrip(tripName: $tripName, datetostartTrip: $datetostartTrip, startLocation: $startLocation, endLocation: $endLocation) {
+       _id
+      tripName
+      datetostartTrip
+      startLocation
+      endLocation
+      # lodging{
+      #   hName
+      #   hAddress
+      #   ConfirmationNo
+      #   hPhone
+      # }
+    }
+  }
+`;
 
 
 export const LOGIN_USER = gql`
@@ -46,7 +63,7 @@ export const LOGIN_USER = gql`
   }
 `;
 export const ADD_WAYPOINT = gql`
-  mutation addwaypoint($waypointId: ID!, $waypointName: String!) {
+  mutation addWaypoint($waypointId: ID!, $waypointName: String!) {
     addWaypoint(waypointId: $waypointId ) {
        _id
      waypointname

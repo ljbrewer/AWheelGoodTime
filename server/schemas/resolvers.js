@@ -8,32 +8,40 @@ const key=process.env.KEY;
 const resolvers = {
   Query: {
     profiles: async () => {
-      return Profile.find();
+      return Profile.find({});
     },
 
     profile: async (parent, { profileId }) => {
-      return Profile.findOne({ _id: profileId });
+      return Profile.findOne({ _id: profileId }).populate('trips').populate({
+        path: 'trips',
+        populate:'waypoints',
+        populate:'landmarks'
+      });
     },
    trips: async () => {
-      return Trip.find();
+      return Trip.find({}).populate('waypoints','landmarks');
     },
 
-   trip: async (parent, { tripId }) => {
-      return trip.findOne({ _id: tripId });
+   trip: async (parent, { tripName }) => {
+     return Trip.findOne({ tripName: $tripName }).populate('waypoints', 'landmarks');
     },
+
    waypoints: async () => {
-      return waypoints.find();
+     return Waypoint.find({});
+    //  .populate('Trip');
     },
 
-    waypoint: async (parent, { waypointsId }) => {
-      return waypoints.findOne({ _id: waypointsId });
+    waypoint: async (parent, { waypointName}) => {
+      return Waypoint.findOne({waypointName:$waypointName }).populate('Trip');
     },
+
     landmarks: async () => {
-      return landmarks.find();
+      return Landmark.find({});
+      // .populate('Trip');
     },
 
-    landmark: async (parent, { landmarkId}) => {
-      return landmarks.findOne({ _id: landmarksId });
+    landmark: async (parent, {landmarkName}) => {
+      return Landmark.findOne({ landmarkName:$landmarkName }).populate('Trip');
     },
 
     geoname: async(parent,{ name, country})=> {

@@ -6,6 +6,7 @@ export const QUERY_PROFILES = gql`
       _id
       name
       email
+     
     }
   }
 `;
@@ -24,7 +25,7 @@ export const QUERY_TRIPS = gql`
     trips {
       _id
       tripName
-      datetostartTrip
+      # datetostartTrip
       # startLocation
       # endLocation
       # lodging{
@@ -67,26 +68,27 @@ export const QUERY_WAYPOINTS = gql`
   }
 `;
 export const QUERY_SINGLE_TRIP = gql`
-  query singleTrip($tripId: ID!) {
-    trip(tripId: $tripId) {
+  query singleTrip($tripName:
+  String!) {
+    trip(tripName: $tripName) {
        _id
       tripName
       datetostartTrip
-      # startLocation
-      # endLocation
-      # lodging{
-      #   hName
-      #   hAddress
-      #   ConfirmationNo
-      #   hPhone
-      # }
+      startLocation
+      endLocation
+      lodging{
+        hName
+        hAddress
+        ConfirmationNo
+        hPhone
+      }
     }
   }
 `; export const QUERY_SINGLE_WAYPOINT = gql`
-  query singleWaypoint($waypointsId: ID!) {
-    waypoint(waypointsId: $waypointsId) {
+  query singleWaypoint($waypointName:String!) {
+    waypoint(waypointName: $waypointName) {
      _id
-     waypointname
+     waypointName
       wLocation
       lodging {
         hName
@@ -97,23 +99,11 @@ export const QUERY_SINGLE_TRIP = gql`
   }
   }
 `; export const QUERY_SINGLE_LANDMARK = gql`
-  query singleLandmark($landmarksId: ID!) {
-   landmark(landmarksId: $landmarksId) {
+  query singleLandmark($landmarkName:
+  String!) {
+   landmark(landmarkName: $landmarkName) {
        _id
-      landmarkname
-      lLocation
-      hours
-      cost
-      contact {
-        phone
-        weblink
-      }
-    }
-  }`; export const QUERY_MANY_WAYPOINT = gql`
-  query manyWaypoint($manyWaypointId: ID!) {
-    manyWaypoint(manyWaypointId: $manyWaypointId) {
-       _id
-      landmarkname
+      landmarkName
       lLocation
       hours
       cost
