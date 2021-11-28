@@ -27,6 +27,18 @@ export default function MyForm() {
     const name = event.target.name;
     const value = event.target.value;
     setInputs(values => ({...values, [name]: value}))
+    saveToLocal()
+  }
+
+  function saveToLocal () {
+    localStorage.setItem("Trip Name", (inputs.name))
+    localStorage.setItem("Starting Point", (inputs.origin))
+    localStorage.setItem("Destination Point", (inputs.destination))
+    localStorage.setItem("Start Date", (inputs.startdate))
+    localStorage.setItem("Name of Stay", (inputs.stayname))
+    localStorage.setItem("Stay Address", (inputs.address))
+    localStorage.setItem("Check In", (inputs.checkin))
+    localStorage.setItem("Check Out", (inputs.checkout))
   }
 
   const handleSubmit = async (event) => {
