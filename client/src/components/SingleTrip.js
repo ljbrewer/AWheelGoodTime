@@ -1,53 +1,78 @@
-// import React, { useState } from 'react';
+// import { useState } from "react";
+// // import { Link } from 'react-router-dom';
 // import { useMutation } from '@apollo/client';
+// import {UPDATE_TRIP} from '../utils/mutations'
 
 
-// import { QUERY_SINGLE_TRIP } from '../utils/queries';
-// import { UPDATE_TRIP } from '../../utils/mutations';
-
-// const SingleTrip = () => {
-//     const [name, setName] = useState('');
-
-//     const [updateTrip, { error }] = useMutation(UPDATE_TRIP, {
-//         update(cache, { data: { updateTrip } }) {
-//             try {
-//                 const { trip } = cache.readQuery({ query: QUERY_SINGLE_TRIP });
-
-//                 cache.writeQuery({
-//                     query: QUERY_SINGLE_TRIP,
-//                     data: { trip: [...trip, updateTrip] },
-//                 });
-//             } catch (e) {
-//                 console.error(e);
-//             }
-//         },
-//     });
-
-//     const handleFormSubmit = async (event) => {
-//         event.preventDefault();
-
-//         try {
-//             const { data } = await updateTrip({
-//                 variables: { name },
-//             });
-
-//             setName('');
-//         } catch (err) {
-//             console.error(err);
-//         }
+// export default function SingleTrip() {
+//     const [inputs, setInputs] = useState({});
+  
+//     const [updateTrip, {error}] = useMutation(UPDATE_TRIP)
+ 
+  
+//     const handleChange = (event) => {
+//       const name = event.target.name;
+//       const value = event.target.value;
+//       setInputs(values => ({...values, [name]: value}))
+//     }
+  
+//     const handleSubmit = async (event) => {
+//       event.preventDefault();
+  
+//       try{
+//         const { data } = await updateTrip({ variables: {...inputs} })
+//         setInputs({});
+//         console.log(inputs);
+//       } catch (error) {
+//         console.log (error)
+//       }
+     
 //     };
-
+  
 //     return (
-//         <form onSubmit={handleFormSubmit}>
-//             <div>
+//       <form onSubmit={handleSubmit}>
+//         <label>
+//         <input
+//           type="text"
+//           placeholder="Name your trip"
+//           name="tripName"
+//           value={inputs.tripName || ""}
+//           onChange={handleChange}
+//         />
+//         </label>
+//         <label>
 //           <input
-//             placeholder="update trip name..."
-//             value={name}
-//             onChange={(event) => setName(event.target.value)}
+//             type="text"
+//             placeholder="Starting Point"
+//             name="startLocation"
+//             value={inputs.startLocation || ""}
+//             onChange={handleChange}
 //           />
-//         </div>
-//         </form>
-//     );
-// }
+//           </label>
+//           <label>
+//           <input
+//             type="text"
+//             placeholder="Enter your destination"
+//             name="endLocation"
+//             value={inputs.endLocation || ""}
+//             onChange={handleChange}
+//           />
+//           </label>
+//           <label>
+//           <input
+//             type="date"
+//             placeholder="datetostartTrip"
+//             name="datetostartTrip"
+//             value={inputs.datetostartTrip || ""}
+//             onChange={handleChange}
+//           />
+//           </label>
+    
+//           <input type="update" />
+//       </form>
+//     )
+//   }
 
-// export default SingleTrip
+
+
+
