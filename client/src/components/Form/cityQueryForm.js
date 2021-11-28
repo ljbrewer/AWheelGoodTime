@@ -55,10 +55,7 @@ console.log(city)
         onChange={handleChange}
       />
       </label>
-<<<<<<< HEAD
-=======
      
->>>>>>> 43305c22c9ff9f22805cec1520f11d473ce531a1
       <button type="submit" onClick={() => findGeoname({ variables: { name:inputs.name } })}>Find Something</button>
     </form>
 
