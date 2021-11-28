@@ -1,10 +1,11 @@
 import { useState } from "react";
-// import ReactDOM from "react-dom";
+import { useLazyQuery } from '@apollo/client';
+import { QUERY_GEONAME } from "../../utils/queries";
 import '../Form/style.css'
-import { useLazyQuery } from '@apollo/client'
 
 export default function LandmarkForm() {
   const [inputs, setInputs] = useState({});
+  const [findGeoname, { loading, error, value }] = useLazyQuery(QUERY_GEONAME);
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -32,6 +33,14 @@ console.log(landmark)
   return (
      
     <form onSubmit={handleSubmit}>
+     <label>Trip Name:
+      <input 
+        type="text" 
+        name="trip" 
+        value={inputs.trip || ""} 
+        onChange={handleChange}
+      />
+      </label>
       <label>Landmark Name:
       <input 
         type="text" 

@@ -1,7 +1,7 @@
 {
-  "name": "tech-friends",
+  "name": "awheelgoodtime",
   "version": "1.0.0",
-  "description": "",
+  "description": "Road Trip Planner",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
@@ -17,14 +17,21 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "@apollo/client": "^3.5.5",
+    "@apollo/client": "^3.3.5",
     "@types/date-fns": "^2.6.0",
     "axios": "^0.24.0",
-
     "date-fns": "^2.25.0",
     "dotenv": "^10.0.0",
-    "graphql": "^16.0.1",
+    "graphql": "^14.6.0",
     "jsonwebtoken": "^8.5.1",
     "react-router-dom": "^6.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljbrewer/AWheelGoodTime.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ljbrewer/AWheelGoodTime/issues"
+  },
+  "homepage": "https://github.com/ljbrewer/AWheelGoodTime#readme"
 }
