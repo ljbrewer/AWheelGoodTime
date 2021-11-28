@@ -6,6 +6,7 @@ const typeDefs = gql`
     firstName: String
     lastName: String
     email:String
+    password: Sring!
     trips:[Trip]
   }
   type Trip {
@@ -82,7 +83,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addProfile(name: String!): Profile
+    addProfile(firstName: String!, lastName:String!,email:String!,password:String!): Profile
     addEmail(profileId: ID!, email: String!): Profile
     removeProfile(profileId: ID!): Profile
     removeEmail(profileId: ID!, email: String!): Profile
