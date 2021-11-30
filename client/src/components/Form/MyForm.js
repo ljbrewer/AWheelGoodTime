@@ -57,6 +57,7 @@ export default function MyForm() {
   return (
     <form onSubmit={handleSubmit}>
       <label>
+      <h3>Name Your Trip:</h3>
       <input
         type="text"
         placeholder="Name your trip"
@@ -64,8 +65,10 @@ export default function MyForm() {
         value={inputs.tripName || ""}
         onChange={handleChange}
       />
+      <br /><br />
       </label>
       <label>
+      <h3>Starting Point:</h3>
         <input
           type="text"
           placeholder="Starting Point"
@@ -74,7 +77,9 @@ export default function MyForm() {
           onChange={handleChange}
         />
         </label>
+        <br /><br />
         <label>
+        <h3>Final Destination:</h3>
         <input
           type="text"
           placeholder="Enter your destination"
@@ -83,7 +88,9 @@ export default function MyForm() {
           onChange={handleChange}
         />
         </label>
+        <br /><br />
         <label>
+        <h3>Start Date:</h3>
         <input
           type="date"
           placeholder="datetostartTrip"
@@ -92,6 +99,7 @@ export default function MyForm() {
           onChange={handleChange}
         />
         </label>
+        <br />
         {/* <label>
       <input
         type="text"

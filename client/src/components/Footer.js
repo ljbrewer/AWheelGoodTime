@@ -4,7 +4,7 @@ import React from 'react';
 const styles = {
     foot: {
         background: '#95d7ae',
-        position: 'fixed',
+        position: 'relative',
         bottom: 0,
         width: '100%',
 },
