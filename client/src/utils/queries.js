@@ -76,11 +76,11 @@ export const QUERY_SINGLE_TRIP = gql`
       datetostartTrip
       startLocation
       endLocation
-      lodging{
-        hName
-        hAddress
-        ConfirmationNo
-        hPhone
+      # lodging{
+      #   hName
+      #   hAddress
+      #   ConfirmationNo
+      #   hPhone
       }
     }
   }
@@ -116,7 +116,7 @@ export const QUERY_SINGLE_TRIP = gql`
 `;
 export const QUERY_GEONAME = gql`
 query geoname($name:String!) {
-  geoname(name: $city) {
+  geoname(name: $name) {
     name
     country
     lat
