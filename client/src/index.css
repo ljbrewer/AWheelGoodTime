@@ -7,32 +7,6 @@ body {
 }
 
 a.btn.btn-lg.btn-info.m-2 {
-  background-color: tomato;
-  padding: 10px;
-  margin: 10px;
-}
-
-a.btn.btn-lg.btn-light.m-2 {
-  background-color: tomato;
-  padding: 10px;
-  margin: 10px;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-h1 {
-  margin: 20px;
-  padding: 15px;
-}
-
-ul li{
-  display: inline;
-}
-
-li.nav-item {
-  display: inline;
   border: solid;
   border-width: 1px 1px 1px 1px;
   margin: 0 5px 0 15px;
@@ -42,6 +16,53 @@ li.nav-item {
   font-size: 20px;
   box-shadow: 5px 5px #b8dbd9;
   margin: 10px;
+}
+
+a.btn.btn-lg.btn-light.m-2 {
+  border: solid;
+  border-width: 1px 1px 1px 1px;
+  margin: 0 5px 0 15px;
+  padding: 15px;
+  background: #95D7AE;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 5px 5px #b8dbd9;
+  margin: 10px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+h1 {
+  margin: 20px;
+  font-size: 3em;
+}
+
+p.m-0 {
+  padding: 10px;
+}
+
+ul li{
+  display: inline;
+}
+
+li.nav-item {
+  border: solid;
+  border-width: 1px 1px 1px 1px;
+  display: inline;
+  margin: 0 5px 0 15px;
+  padding: 15px;
+  background: #95D7AE;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 5px 5px #b8dbd9;
+  margin: 10px;
+}
+.backbox {
+  background-color: #ffffff99;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 ul.nav.nav-tabs :hover {
@@ -55,6 +76,7 @@ ul.nav.nav-tabs :focus {
 
 ul.nav.nav-tabs {
 padding: 20px;
+border-width: solid;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
@@ -73,9 +95,53 @@ form {
   padding: 10px;
 }
 
+footer {
+  background-color: #454851;
+  position: 'relative';
+  width: '100%';
+  height: 50px;
+  padding: 10px;
+  color: white;
+  display: flex;
+    justify-content: space-between;
+}
+
+header {
+  background-color: #454851;
+  position: 'relative';
+  width: '100%';
+  padding: 10px;
+  height: 250px;
+  color: white;
+  background-image: url('./images/road.gif');
+  background-size: cover;
+}
+
+h1.m-0 {
+  color: white;
+}
+
+input[type="submit"] {
+  background-color: #95D7AE;
+  padding: 10px;
+  border-radius: 15px;
+  color: white;
+}
+
+button {
+  background-color: #95D7AE;
+  padding: 10px;
+  border-radius: 15px;
+  color: white;
+}
+
+ul li{
+  display: inline;
+}
+
 @media only screen and (max-width: 900px) {
   body {
-    background-color: lightblue;
+    box-sizing: border-box;
   }
   
 }

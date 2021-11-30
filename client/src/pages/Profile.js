@@ -14,8 +14,9 @@ console.log(data)
     return <div>Loading...</div>;
   }
   return (
-    <div>
-      <h1>My profile</h1>
+    <div class="backbox">
+      <h1>User's profile</h1>
+
       <span>
         
         
