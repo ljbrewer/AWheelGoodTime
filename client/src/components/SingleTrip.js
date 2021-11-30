@@ -15,7 +15,8 @@ console.log(data)
   }
   return (
     <div>
-      <h1>{data.trip.tripName}</h1>
+      <h2>trip details</h2>
+      {data?.trip?.length > 0? data.trip.match(trip => <div key={trip._id}>{trip.tripName}</div>):undefined}
       
     </div>
 

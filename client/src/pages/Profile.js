@@ -15,7 +15,7 @@ console.log(data)
   }
   return (
     <div class="backbox">
-      <h1>User's profile</h1>
+      <h1>My Trips</h1>
 
       <span>
         
@@ -33,3 +33,4 @@ console.log(data)
     
   );
 }
+
