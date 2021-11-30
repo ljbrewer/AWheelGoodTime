@@ -5,29 +5,29 @@ import { Link } from 'react-router-dom';
 function NavTabs() {
   return (
     <ul className="nav nav-tabs">
-      <li className="nav-item">
-      <Link className="text-light" to="/me">
+      <li className="nav-item">📱 
+      <Link className="text-light" to="/">
           Profile
-       </Link> 
+       </Link> 📱
       </li>
-      <li className="nav-item">
+      <li className="nav-item">🚙 
       <Link className="text-light" to="/createtrip">
           Create a trip
-        </Link>
+        </Link> 🚙
       </li>
-      <li className="nav-item">
+      <li className="nav-item">📍
       <Link className="text-light" to="/waypoints">
           Map Your Waypoints
-        </Link>
+        </Link> 📍
       </li>
-      <li className="nav-item">
+      <li className="nav-item">🗺️ 
       <Link className="text-light" to="/pointsofInterest">
           Map Your Points of Interest
-        </Link>
+        </Link> 🗺️
       </li>
-      <li className="nav-item">
+      <li className="nav-item"> 🎯
       <Link className="text-light" to="/trip/:tripId">
-          Single trip details here
+          Single trip details here 🎯
        </Link> 
       </li>
     </ul>

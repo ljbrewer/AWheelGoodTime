@@ -98,6 +98,7 @@ export const QUERY_SINGLE_TRIP = gql`
       #   ConfirmationNo
       #   hPhone
       # }
+
     }
   }
 `; export const QUERY_SINGLE_WAYPOINT = gql`
@@ -132,7 +133,7 @@ export const QUERY_SINGLE_TRIP = gql`
 `;
 export const QUERY_GEONAME = gql`
 query geoname($name:String!) {
-  geoname(name: $city) {
+  geoname(name: $name) {
     name
     country
     lat

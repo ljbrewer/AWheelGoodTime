@@ -1,10 +1,21 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Merriweather', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fceff9;
+}
+
+a.btn.btn-lg.btn-info.m-2 {
+  background-color: tomato;
+  padding: 10px;
+  margin: 10px;
+}
+
+a.btn.btn-lg.btn-light.m-2 {
+  background-color: tomato;
+  padding: 10px;
+  margin: 10px;
 }
 
 code {
@@ -29,10 +40,13 @@ li.nav-item {
   background: #95D7AE;
   border-radius: 10px;
   font-size: 20px;
+  box-shadow: 5px 5px #b8dbd9;
+  margin: 10px;
 }
 
 ul.nav.nav-tabs :hover {
-background-color: #FCEFF9;
+background-color: #454851;
+color: #fceff9;
 }
 
 ul.nav.nav-tabs :focus {
@@ -41,10 +55,22 @@ ul.nav.nav-tabs :focus {
 
 ul.nav.nav-tabs {
 padding: 20px;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-content: stretch;
+justify-content: space-around;
 }
 
 label {
   margin: 15px;
+}
+
+form {
+  overflow: scroll;
+  max-height: 75%;
+  margin: 15px;
+  padding: 10px;
 }
 
 @media only screen and (max-width: 900px) {
