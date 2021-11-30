@@ -14,7 +14,7 @@ console.log(data)
     return <div>Loading...</div>;
   }
   return (
-    <div>
+    <div class="backbox">
       <h1>User's profile</h1>
       <span>
         {/* <Link 

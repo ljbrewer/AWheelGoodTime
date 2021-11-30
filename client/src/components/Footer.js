@@ -12,14 +12,17 @@ const styles = {
 
 function Footer() {
     return (
-        <div style={styles.foot}>
+        <footer>
         
         
-            <h1>footer</h1>
+            <p>Copyright 2021</p>
+            <ul>
+            <li>See the World Through the Eyes of the Open Road</li> | <li><a href ="https://github.com/ljbrewer/AWheelGoodTime">GitHub Repo</a></li>                
+            </ul>
        
         
    
-        </div>
+        </footer>
     );
 }
 

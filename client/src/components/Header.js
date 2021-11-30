@@ -13,17 +13,17 @@ const Header = () => {
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
           <Link className="text-light" to="/">
-            <h1 className="m-0">A Wheel good time</h1>
+            <h1 className="m-0">A Wheel Good Time</h1>
           </Link>
-          <p className="m-0">plan a trip. </p>
+          <p className="m-0">Plan the Perfect Road Trip. Beep Beep </p>
         </div>
         <div>
           {Auth.loggedIn() ? (
             <>
-              <Link className="button0" to="/me">
+              <Link className="btn btn-lg btn-info m-2" to="/me">
                 {Auth.getProfile().data.username}'s profile
               </Link>
-              <button className="button0" onClick={logout}>
+              <button className="btn btn-lg btn-light m-2" onClick={logout}>
                 Logout
               </button>
             </>
