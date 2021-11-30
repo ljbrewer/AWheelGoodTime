@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/Header';
 import NavTabs from './components/NavTabs';
 import Footer from './components/Footer';
+import Home from './pages/Home'
 import Profile from './pages/Profile';
 import CreateTrip from './pages/CreateTrip';
 import WayPoints from './pages/WayPoints';
@@ -52,13 +53,16 @@ function App() {
           <NavTabs />
           <div className="container">
             <Route exact path="/">
-              <Profile />
+              <Home />
             </Route>
             <Route exact path="/login">
               <Login />
             </Route>
             <Route exact path="/signup">
               <Signup />
+            </Route>
+            <Route exact path="/me">
+              <Profile />
             </Route>
               <Route exact path="/createtrip">
                 <CreateTrip />
@@ -70,7 +74,7 @@ function App() {
                 <Landmarks />
                 </Route>
 
-            <Route exact path="/trip/:tripId">
+            <Route exact path="/trip/:trip_id">
               <SingleTrip />
             </Route>
 

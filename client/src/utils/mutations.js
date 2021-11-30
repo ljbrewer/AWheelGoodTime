@@ -1,13 +1,15 @@
 import { gql } from '@apollo/client';
 
 export const ADD_PROFILE = gql`
-  mutation addProfile($name: String!, $email: String!, $password: String!) {
-    addProfile(name: $name, email: $email, password: $password) {
+  mutation addProfile($firstName: String!, $lastName:String!, $email: String!, $password: String!) {
+    addProfile(firstName: $firstName, lastName: $lastName, email: $email, password: $password) {
       token
       profile {
         _id
-        name
+        firstName
+        lastName
         email
+        
       }
     }
   }
@@ -37,8 +39,8 @@ export const UPDATE_TRIP= gql`
        _id
       tripName
       datetostartTrip
-      startLocation
-      endLocation
+      # startLocation
+      # endLocation
       # lodging{
       #   hName
       #   hAddress
@@ -56,7 +58,7 @@ export const LOGIN_USER = gql`
       token
       profile {
         _id
-        name
+        # name
         email
       }
     }

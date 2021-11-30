@@ -78,11 +78,12 @@ const typeDefs = gql`
     landmark(landmarkName: String!): Landmark
     geoname(name: String!, country:String): Geoname
     bbox(lonmin:Float,lonmax:Float, latmin:Float,latmax:Float,name:String,kind:String,limit:Int):Bbox
-    places(radius:Int,lon:Float, lat:Float,limit:Int):Places
+    places(radius:Int,lon:Float, lat:Float,limit:Int):Places,
+    login(email:String!, password:String!): Auth
   }
 
   type Mutation {
-    addProfile(name: String!): Profile
+    addProfile(firstName: String!, lastName:String!, email: String!, password:String!): Auth
     addEmail(profileId: ID!, email: String!): Profile
     removeProfile(profileId: ID!): Profile
     removeEmail(profileId: ID!, email: String!): Profile
@@ -95,10 +96,9 @@ const typeDefs = gql`
     login(email:String!, password:String!): Auth
     
     updateTrip(
-     name: String
+      id:ID!
+     name: String!
      datetostartTrip: String
-     startLocation: String
-     endLocation: String
     ): Trip
 
     updateWaypoint(

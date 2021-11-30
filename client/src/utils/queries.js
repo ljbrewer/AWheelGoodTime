@@ -20,6 +20,22 @@ export const QUERY_SINGLE_PROFILE = gql`
     }
   }
 `;
+
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      username
+      email
+      trip {
+        _id
+        tripName
+      }
+    }
+  }
+`;
+
+
 export const QUERY_TRIPS = gql`
   query allTrips {
     trips {
@@ -68,20 +84,20 @@ export const QUERY_WAYPOINTS = gql`
   }
 `;
 export const QUERY_SINGLE_TRIP = gql`
-  query singleTrip($tripName:
-  String!) {
+  query singleTrip($trip_id:ID!, $tripName:
+  String!, $datetostartTrip:String) {
     trip(tripName: $tripName) {
        _id
       tripName
       datetostartTrip
       startLocation
       endLocation
-      lodging{
-        hName
-        hAddress
-        ConfirmationNo
-        hPhone
-      }
+      # lodging{
+      #   hName
+      #   hAddress
+      #   ConfirmationNo
+      #   hPhone
+      # }
     }
   }
 `; export const QUERY_SINGLE_WAYPOINT = gql`

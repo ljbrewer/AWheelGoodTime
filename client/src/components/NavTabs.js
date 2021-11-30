@@ -6,7 +6,7 @@ function NavTabs() {
   return (
     <ul className="nav nav-tabs">
       <li className="nav-item">
-      <Link className="text-light" to="/">
+      <Link className="text-light" to="/me">
           Profile
        </Link> 
       </li>
