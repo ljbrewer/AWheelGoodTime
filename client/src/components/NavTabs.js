@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 function NavTabs() {
   return (
     <ul className="nav nav-tabs">
-      <li className="nav-item">📱 
+      <li className="nav-item">🚺  
       <Link className="text-light" to="/">
           Profile
-       </Link> 📱
+       </Link> 🚹
       </li>
       <li className="nav-item">🚙 
       <Link className="text-light" to="/createtrip">
