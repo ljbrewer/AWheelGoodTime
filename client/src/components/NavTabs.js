@@ -25,11 +25,7 @@ function NavTabs() {
           Map Your Points of Interest
         </Link> 🗺️
       </li>
-      <li className="nav-item"> 🎯
-      <Link className="text-light" to="/trip/:tripId">
-          Single trip details here 🎯
-       </Link> 
-      </li>
+      
     </ul>
   );
 }

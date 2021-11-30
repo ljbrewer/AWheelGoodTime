@@ -18,7 +18,7 @@ import WayPoints from './pages/WayPoints';
 import Landmarks from './pages/Landmarks';
 import Login from './pages/Login';
 import Signup from './pages/Signup'
-import SingleTrip from './components/SingleTrip';
+// import SingleTrip from './components/SingleTrip';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -74,9 +74,9 @@ function App() {
                 <Landmarks />
                 </Route>
 
-            <Route exact path="/trip/:trip_id">
+            {/* <Route exact path="/trip/:trip_id">
               <SingleTrip />
-            </Route>
+            </Route> */}
 
 
 

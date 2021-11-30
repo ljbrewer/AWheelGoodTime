@@ -17,13 +17,12 @@ console.log(data)
     <div>
       <h1>My profile</h1>
       <span>
-        {/* <Link 
-        className="btn btn-block btn-squared btn-light text-dark"
-        to={`/trip/:${data.trip._id}`}>
-         */}
-      {data.trips.map(trip => <div key={trip._id}>{trip.tripName}</div>)}
+        
+        
+      {data?.trips?.length > 0? data.trips.map(trip => <div key={trip._id}>{trip.tripName}<Link 
+        to={`/trip/${trip._id}`}>View Details</Link></div>):undefined}
       
-       {/* </Link> */}
+      
 
        
       
