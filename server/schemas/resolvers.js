@@ -22,8 +22,9 @@ const resolvers = {
       return Trip.find({}).populate('waypoints', 'landmarks');
     },
 
-    trip: async (parent, { tripName }) => {
-      return Trip.findOne({ tripName: $tripName }).populate('waypoints', 'landmarks');
+    trip: async (parent, { tripId }) => {
+      return Trip.findOne({ _id: tripId })
+      // .populate('waypoints', 'landmarks');
     },
 
     waypoints: async () => {

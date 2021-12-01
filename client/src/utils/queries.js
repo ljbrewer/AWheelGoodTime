@@ -84,9 +84,8 @@ export const QUERY_WAYPOINTS = gql`
   }
 `;
 export const QUERY_SINGLE_TRIP = gql`
-  query singleTrip($trip_id:ID!, $tripName:
-  String!, $datetostartTrip:String) {
-    trip(tripName: $tripName) {
+  query singleTrip($trip_id: ID!) {
+    trip(tripId: $trip_id) {
        _id
       tripName
       datetostartTrip
@@ -101,7 +100,8 @@ export const QUERY_SINGLE_TRIP = gql`
 
     }
   }
-`; export const QUERY_SINGLE_WAYPOINT = gql`
+`; 
+export const QUERY_SINGLE_WAYPOINT = gql`
   query singleWaypoint($waypointName:String!) {
     waypoint(waypointName: $waypointName) {
      _id
